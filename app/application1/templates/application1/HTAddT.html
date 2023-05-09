@@ -1,0 +1,18 @@
+{% extends 'application1/base.html' %}
+
+{% block title %}Добавить сообщение{% endblock %}
+
+{% block body %}
+    <form method="post">
+        <div>
+            {% csrf_token %}
+            {{ form1.Trealy }}<br>
+            {{ form1.Tmessage }}<br>
+            {{ form1.Tdata }}<br>
+            <span>{{error}}</span>
+            <button type="submit" class="btn btn-success">Добавить</button>
+        </div>
+    </form>
+
+
+{% endblock %}

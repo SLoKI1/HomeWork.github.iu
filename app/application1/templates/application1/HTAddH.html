@@ -1,0 +1,18 @@
+{% extends 'application1/base.html' %}
+
+{% block title %}Добавить задание{% endblock %}
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.Hrealy }}<br>
+        {{ form.Hitem }}<br>
+        {{ form.Hexercise }}<br>
+        {{ form.Hdata }}<br>
+        {{ form.id }}<br>
+        <span>{{ error }}</span>
+
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+
+{% endblock %}
